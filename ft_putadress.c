@@ -6,9 +6,11 @@
 /*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:51:21 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 13:51:32 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/05 16:16:52 by takagiyoshi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "printf.h"
 
 int	ft_putadress(unsigned long nb)
 {

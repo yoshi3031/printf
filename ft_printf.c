@@ -3,151 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:01:53 by yotakagi          #+#    #+#             */
-/*   Updated: 2024/12/04 15:18:51 by yotakagi         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:16:59 by takagiyoshi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdarg.h"
-#include "stdio.h"
-#include "unistd.h"
+#include "printf.h"
 
-int	ft_putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-int	ft_putnbr(int nb)
-{
-	int	r;
-
-	r = 0;
-	if (nb == -2147483648)
-		return (write(1, "-2147483648", 11));
-	if (nb < 0)
-	{
-		r += (write(1, "-", 1));
-		nb *= -1;
-	}
-	if (nb > 9)
-	{
-		r += ft_putnbr(nb / 10);
-		r += ft_putnbr(nb % 10);
-	}
-	else
-		r += ft_putchar(nb + 48);
-	return (r);
-}
-
-int	ft_putunbr(unsigned int nb)
-{
-	unsigned int	re;
-
-	re = 0;
-	if (nb > 9)
-	{
-		re += ft_putunbr(nb / 10);
-		re += ft_putunbr(nb % 10);
-	}
-	else
-		re += ft_putchar(nb + 48);
-	return (re);
-}
-
-int	ft_putstr(char *str)
-{
-	int	i;
-
-	if (str == NULL)
-		return (write(1, "(null)", 6));
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-	return (i);
-}
-
-int	ft_puthex(unsigned int nb)
-{
-	int		re;
-	char	*base;
-
-	re = 0;
-	base = "0123456789abcdef";
-	if (nb >= 16)
-	{
-		re += ft_puthex(nb / 16);
-		re += ft_puthex(nb % 16);
-	}
-	else
-		re += ft_putchar(base[nb % 16]);
-	return (re);
-}
-
-int	ft_puthex_m(unsigned int nb)
-{
-	int		re;
-	char	*base;
-
-	re = 0;
-	base = "0123456789ABCDEF";
-	if (nb >= 16)
-	{
-		re += ft_puthex_m(nb / 16);
-		re += ft_puthex_m(nb % 16);
-	}
-	else
-		re += ft_putchar(base[nb % 16]);
-	return (re);
-}
-
-int	ft_putadress(unsigned long nb)
-{
-	int		re;
-	char	*base;
-
-	re = 0;
-	base = "0123456789abcdef";
-	if (nb >= 16)
-	{
-		re += ft_putadress(nb / 16);
-		re += ft_putadress(nb % 16);
-	}
-	else
-		re += ft_putchar(base[nb % 16]);
-	return (re);
-}
-
-int	ft_check(va_list args, char c)
-{
-	int	re;
-
-	re = 0;
-	if (c == 'd' || c == 'i')
-		re = ft_putnbr(va_arg(args, int));
-	else if (c == 'c')
-		re = ft_putchar(va_arg(args, int));
-	else if (c == 's')
-		re = ft_putstr(va_arg(args, char *));
-	else if (c == 'x')
-		re = ft_puthex(va_arg(args, unsigned int));
-	else if (c == 'X')
-		re = ft_puthex_m(va_arg(args, unsigned int));
-	else if (c == 'p')
-	{
-		re = ft_putstr("0x");
-		re += ft_putadress(va_arg(args, unsigned long));
-	}
-	else if (c == 'u')
-		re = ft_putunbr(va_arg(args, unsigned int));
-	else if (c == '%')
-		return (ft_putchar('%'));
-	return (re);
-}
 
 int	ft_printf(const char *str, ...)
 {
