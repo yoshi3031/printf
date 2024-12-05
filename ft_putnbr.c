@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:53:21 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 16:33:17 by yotakagi         ###   ########.fr       */
+/*   Updated: 2024/12/05 23:49:27 by takagiyoshi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:50:58 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 18:27:47 by yotakagi         ###   ########.fr       */
+/*   Updated: 2024/12/05 23:33:03 by takagiyoshi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ int	ft_check(va_list args, char c)
 	else if (c == 'X')
 		re = ft_puthex_m(va_arg(args, unsigned int));
 	else if (c == 'p')
-	{
-		re = ft_putstr("0x");
 		re += ft_putadress(va_arg(args, unsigned long));
-	}
 	else if (c == 'u')
 		re = ft_putunbr(va_arg(args, unsigned int));
 	else if (c == '%')
