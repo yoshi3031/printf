@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:52:27 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 16:16:31 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/05 18:32:06 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_puthex(unsigned int nb)
+int	ft_puthex(unsigned long nb)
 {
 	int		re;
 	char	*base;

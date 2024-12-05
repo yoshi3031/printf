@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:52:52 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 16:16:39 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/05 17:04:29 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

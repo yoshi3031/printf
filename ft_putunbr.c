@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:53:50 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 16:16:42 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/05 16:33:22 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putunbr(unsigned int nb)
 {

@@ -15,6 +15,7 @@ SRC = ft_printf.c ft_check.c ft_putadress.c ft_putchar.c ft_puthex.c \
 OBJ = $(SRC:.c=.o)
 
 
+
 all: $(NAME)
 
 $(NAME): $(OBJ)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:50:58 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 16:17:04 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/05 18:27:47 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

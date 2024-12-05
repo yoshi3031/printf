@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex_m.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:52:04 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/05 16:16:48 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/05 16:33:07 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_puthex_m(unsigned int nb)
 {
