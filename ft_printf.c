@@ -6,7 +6,7 @@
 /*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:01:53 by yotakagi          #+#    #+#             */
-/*   Updated: 2024/12/06 00:59:09 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/09 04:34:22 by takagiyoshi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		re;
 
+	if(!str)
+		*str;
 	va_start(args, str);
 	re = 0;
 	i = 0;
@@ -104,8 +106,8 @@ int	ft_printf(const char *str, ...)
 // 	printf("printf: %d\n", 42);       // 引数不足を防ぐ
 // 	ft_printf("ft_printf: %d\n", 42); // 引数不足を防ぐ
 // 	// 17. フォーマット文字列がNULL
-// 	printf("printf: %s\n", (char *)NULL);       // NULL文字列を渡す
-// 	ft_printf("ft_printf: %s\n", (char *)NULL); // NULL文字列を渡す
+// 	// printf(NULL, (char *)NULL);       // NULL文字列を渡す
+// 	ft_printf(NULL, (char *)NULL); // NULL文字列を渡す
 // 	// 18. 長すぎる文字列
 // 	printf("printf: %s\n", long_str);
 // 	ft_printf("ft_printf: %s\n", long_str);
