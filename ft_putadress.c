@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putadress.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:51:21 by takagiyoshi       #+#    #+#             */
-/*   Updated: 2024/12/06 00:59:18 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/13 16:28:15 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int	ft_putadress(unsigned long nb)
 {
-	if(nb == 0)
+	int	re;
+
+	re = 0;
+	if (nb == 0)
 		return (ft_putstr("(nil)"));
-	ft_putstr("0x");
-	return (ft_puthex(nb));
+	re += ft_putstr("0x");
+	return (re + (ft_puthex(nb)));
 }

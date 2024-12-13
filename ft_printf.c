@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takagiyoshiharu <takagiyoshiharu@studen    +#+  +:+       +#+        */
+/*   By: yotakagi <yotakagi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:01:53 by yotakagi          #+#    #+#             */
-/*   Updated: 2024/12/09 04:34:22 by takagiyoshi      ###   ########.fr       */
+/*   Updated: 2024/12/13 16:17:52 by yotakagi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		re;
 
-	if(!str)
-		*str;
 	va_start(args, str);
 	re = 0;
 	i = 0;
@@ -38,83 +36,54 @@ int	ft_printf(const char *str, ...)
 	return (re);
 }
 
-// #include <stdio.h>
+// #include <stdlib.h>
 
 // int	main(void)
 // {
-// 	int				num;
-// 	int				neg_num;
-// 	char			c;
-// 	char			*str;
-// 	int				*ptr;
-// 	unsigned int	u_num;
-// 	char			*null_str;
-// 	unsigned long	*null_ptr;
-// 	char			long_str[] = "This is a really long string that might cause overflow if not handled properly by printf.";
-// 	char			*infinite_loop_str;
+// 	char	*null_str;
+// 	int		x;
 
-// 	int a, b;
-// 	a = 5, b = 10;
-// 	// 1. 整数の表示
-// 	num = 42;
-// 	printf("printf: %d\n", num);
-// 	ft_printf("ft_printf: %d\n", num);
-// 	// 2. 負の整数の表示
-// 	neg_num = -42;
-// 	printf("printf: %d\n", neg_num);
-// 	ft_printf("ft_printf: %d\n", neg_num);
-// 	// 3. 文字の表示
-// 	c = 'A';
-// 	printf("printf: %c\n", c);
-// 	ft_printf("ft_printf: %c\n", c);
-// 	// 4. 文字列の表示
-// 	str = "Hello, World!";
-// 	printf("printf: %s\n", str);
-// 	ft_printf("ft_printf: %s\n", str);
-// 	// 5. ポインタの表示
-// 	ptr = &num;
-// 	printf("printf: %p\n", ptr);
-// 	ft_printf("ft_printf: %p\n", ptr);
-// 	// 6. 無符号整数の表示
-// 	u_num = 12345;
-// 	printf("printf: %u\n", u_num);
-// 	ft_printf("ft_printf: %u\n", u_num);
-// 	// 7. 16進数 (小文字) の表示
-// 	printf("printf: %x\n", num);
-// 	ft_printf("ft_printf: %x\n", num);
-// 	// 8. 16進数 (大文字) の表示
-// 	printf("printf: %X\n", num);
-// 	ft_printf("ft_printf: %X\n", num);
-// 	// 10. 複数の引数
-// 	printf("printf: a = %d, b = %d\n", a, b);
-// 	ft_printf("ft_printf: a = %d, b = %d\n", a, b);
-// 	// 11. フォーマット指定子なし
-// 	printf("printf: No format\n");
-// 	ft_printf("ft_printf: No format\n");
-// 	// 13. 不正なフォーマット指定子（%qなど）
-// 	printf("printf: %%q\n");       // 不正なフォーマット指定子
-// 	ft_printf("ft_printf: %%q\n"); // 不正なフォーマット指定子
-// 	// 14. 未初期化のポインタ（NULL）
+// 	// Integer test
+// 	printf("printf: %d\n", 42);
+// 	ft_printf("ft_printf: %d\n", 42);
+// 	printf("printf: %d\n", -42);
+// 	ft_printf("ft_printf: %d\n", -42);
+// 	// Character test
+// 	printf("printf: %c\n", 'A');
+// 	ft_printf("ft_printf: %c\n", 'A');
+// 	// String test
+// 	printf("printf: %s\n", "Hello, world!");
+// 	ft_printf("ft_printf: %s\n", "Hello, world!");
 // 	null_str = NULL;
-// 	printf("printf: %s\n", null_str);       // NULL ポインタを渡す
-// 	ft_printf("ft_printf: %s\n", null_str); // NULL ポインタを渡す
-// 	// 15. NULL を渡すときのポインタ表示（%p）
-// 	null_ptr = NULL;
-// 	printf("printf: %p\n", null_ptr);       // NULL ポインタ
-// 	ft_printf("ft_printf: %p\n", null_ptr); // NULL ポインタ
-// 	// 16. 不正な引数数（%dに対して引数が不足）
-// 	printf("printf: %d\n", 42);       // 引数不足を防ぐ
-// 	ft_printf("ft_printf: %d\n", 42); // 引数不足を防ぐ
-// 	// 17. フォーマット文字列がNULL
-// 	// printf(NULL, (char *)NULL);       // NULL文字列を渡す
-// 	ft_printf(NULL, (char *)NULL); // NULL文字列を渡す
-// 	// 18. 長すぎる文字列
-// 	printf("printf: %s\n", long_str);
-// 	ft_printf("ft_printf: %s\n", long_str);
-// 	// 19. 無限ループを引き起こすケース（%sに対してNULL）
-// 	infinite_loop_str = NULL;
-// 	printf("printf: %s\n", infinite_loop_str);       // NULL文字列
-// 	ft_printf("ft_printf: %s\n", infinite_loop_str); // NULL文字列
-// 	ft_printf("Hello, %s! You have %d new messages.\n", "Alice", 5); // 42 と 'A' は無視される
+// 	printf("printf: %s\n", null_str);
+// 	ft_printf("ft_printf: %s\n", null_str);
+// 	// Pointer test
+// 	x = 42;
+// 	printf("printf: %p\n", &x);
+// 	ft_printf("ft_printf: %p\n", &x);
+// 	printf("printf: %p\n", null_str);
+// 	ft_printf("ft_printf: %p\n", null_str);
+// 	// Unsigned integer test
+// 	printf("printf: %u\n", 42);
+// 	ft_printf("ft_printf: %u\n", 42);
+// 	// Hexadecimal test
+// 	printf("printf: %x\n", 42);
+// 	ft_printf("ft_printf: %x\n", 42);
+// 	printf("printf: %X\n", 42);
+// 	ft_printf("ft_printf: %X\n", 42);
+// 	// Multiple arguments test
+// 	printf("printf: %d %c %s\n", 42, 'A', "Hello");
+// 	ft_printf("ft_printf: %d %c %s\n", 42, 'A', "Hello");
+// 	// No format specifier
+// 	printf("printf: Hello, world!\n");
+// 	ft_printf("ft_printf: Hello, world!\n");
+// 	// Invalid format specifier
+// 	printf("printf: %%q\n");
+// 	ft_printf("ft_printf: %%q\n");
+// 	// Long string test
+// 	printf("printf: %s\n",
+// 		"This is a very long string to test the ft_printf implementation.");
+// 	ft_printf("ft_printf: %s\n",
+// 		"This is a very long string to test the ft_printf implementation.");
 // 	return (0);
 // }
